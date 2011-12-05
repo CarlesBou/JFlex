@@ -1288,8 +1288,7 @@ final public class Emitter {
       
       println("          { "+action.content);
       println("          }");
-      println("          " + Options.lang.end_case_body());
-      println("        "+Options.lang.start_case("" + (i++))+Options.lang.start_case_body()+Options.lang.end_case_body()); 
+      println("        " + Options.lang.end_case_body(i++));
     }
   }
 
@@ -1325,8 +1324,7 @@ final public class Emitter {
           }
           println("              "+action.content);
           println("            }");
-          println("            " + Options.lang.end_case_body());
-          println("            "+Options.lang.start_case(""+(++last))+Options.lang.start_case_body()+Options.lang.end_case_body());
+          println("          " + Options.lang.end_case_body(++last));
         }
       }
       

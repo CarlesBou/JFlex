@@ -180,6 +180,13 @@ public class JavaLanguage implements Language {
     return "break;";
   }
 
+  /* (non-Javadoc)
+   * @see JFlex.Language#end_case_body(int)
+   */
+  public String end_case_body(int last) {
+    return "case " + last + ": break; // work around unreachable code error";
+  }
+
   public String start_label_block(String name) {
     return name + ": {";
   }

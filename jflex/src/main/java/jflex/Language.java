@@ -62,6 +62,15 @@ public interface Language {
   String add_case(String val);
   String start_case_body();
   String end_case_body();
+  /**
+   * Same as end_case_body(), but works around "unreachable code"
+   * error by not adding the "break;" statement right away, but
+   * inserting an additional "case <last>:" before it.
+   * 
+   * The caller should maintain a counter last to ensure the
+   * uniqueness of the case.
+   */
+  String end_case_body(int last);
   String gen_default();
   
   // Exiting loops;
