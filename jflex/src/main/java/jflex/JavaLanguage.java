@@ -149,7 +149,7 @@ public class JavaLanguage implements Language {
    * @see JFlex.Language#start_case(java.lang.String)
    */
   public String start_case(String val) {
-    return "case " + val + ":\n";
+    return "case " + val + ":";
   }
 
   /* (non-Javadoc)
@@ -184,7 +184,7 @@ public class JavaLanguage implements Language {
    * @see JFlex.Language#end_case_body(int)
    */
   public String end_case_body(int last) {
-    return "case " + last + ": break; // work around unreachable code error";
+    return "case " + last + ": break;";
   }
 
   public String start_label_block(String name) {
